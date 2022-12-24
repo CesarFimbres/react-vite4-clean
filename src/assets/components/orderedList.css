@@ -1,0 +1,10 @@
+.ordered_list{
+  padding: 0; 
+  text-align: left;
+
+}
+
+
+.ordered_list li{
+  padding-left: 0.3em;
+}

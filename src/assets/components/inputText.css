@@ -1,0 +1,11 @@
+.input_text{
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  line-height: 1.5em;
+  padding: 0 0.3rem;
+  transition: all ease 0.3s;
+}
+.input_text:hover{
+  border: 1px solid #646cff;
+}

@@ -1,16 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import { InputText } from './assets/components/InputText';
+import { OrderedList } from './assets/components/OrderedList';
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css';
 
-  return (
-    <div className="App">
-      <h1>App</h1>
-      <p>yarn, vite, react, javascript </p>
-    </div>
-  )
-}
+const App = () => {
+	const [itemsList, setItemsList] = useState(['uno', 'dos']);
 
-export default App
+	const handleAddItem = (value) => {
+		if (itemsList.includes(value)) return;
+		setItemsList([...itemsList, value]);
+	};
+
+	return (
+		<>
+			<h1>App</h1>
+			<p>vite4, yarn, react, javascript</p>
+
+			<div className='container'>
+				<InputText handleNewItem={handleAddItem} />
+
+				<OrderedList itemsList={itemsList} />
+			</div>
+		</>
+	);
+};
+
+export default App;
