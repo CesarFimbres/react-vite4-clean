@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { InputText } from './assets/components/InputText';
-import { OrderedList } from './assets/components/OrderedList';
+import React, { useState } from 'react';
+import { InputText } from './components/InputText';
+import { OrderedList } from './components/OrderedList';
 
 import './App.css';
 
 const App = () => {
+
+	console.log('Hello from bun runner!')
+
 	const [itemsList, setItemsList] = useState(['uno', 'dos']);
 
 	const handleAddItem = (value) => {
@@ -15,7 +18,7 @@ const App = () => {
 	return (
 		<>
 			<h1>App</h1>
-			<p>vite4, yarn, react, javascript</p>
+			<p>vite4, bun, react, javascript</p>
 
 			<div className='container'>
 				<InputText handleNewItem={handleAddItem} />
